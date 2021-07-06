@@ -1,0 +1,197 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <script>
+        $(function() {
+            var copyObj = $(".box1").children().clone();
+            console.log(copyObj);
+            $(".box3").append(copyObj);
+            $(".box2").remove();   // 그 클라스 자체를 삭제
+            $(".box3").empty();    // 요소의 모든 하위 요소만 삭제
+            $(".box3").append(copyObj);
+        })
+    </script>
+
+    <div class = "box1">
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+    </div>
+
+    <div class = "box2">
+        <p>내용4</p>
+        <p>내용5</p>
+        <p>내용6</p>
+    </div>
+
+    <div class = "box3">
+        <p>내용7</p>
+        <p>내용8</p>
+        <p>내용9</p>
+    </div>
+
+    <!-- <script>
+        $(function() {
+            $("#wrap p:eq(2)").after("<p>After</p>");
+            $("<p>inserAfter</p>").insertAfter("#wrap p:eq(1)");
+        })
+    </script>
+
+    <div id = "wrap">
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+    </div> -->
+
+    <!-- 스크롤 위치 조정 
+        
+        <script>
+        $(function() {
+
+            var topNum = $("h1").offset().top;
+            $(window).scrollTop(topNum);
+            console.log(topNum);
+
+            var sct = $(window).scrollTop();
+            console.log(sct);
+
+        })
+    </script>
+
+    <style>
+        body {
+            line-height: 1;
+        }
+        
+        #wrap {
+            height: 5000px;
+            padding-top: 2000px;
+        }
+    </style>
+    <div id="wrap">
+        <h1>위치 메서드</h1>
+    </div> -->
+
+    <!-- <script>
+        $(function() {
+            var $txt1 = $(".txt_1 span"),
+                $txt2 = $(".txt_2 span"),
+                $box = $(".box");
+
+            var off_t = $box.offset().top;
+            var pos_t = $box.position().top;
+
+            $txt1.text(off_t);
+            $txt2.text(pos_t);
+        });
+    </script>
+
+    <style>
+        #box_wrap {
+            width: 300px;
+            height: 200px;
+            margin: 50px;
+            position: relative;
+            background-color: #ccc;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 100px;
+            top: 50px;
+            background-color: #f00;
+        }
+    </style>
+
+    <div id="box_wrap">
+        <h3 class="box">박스</h3>
+    </div>
+    <p class="txt_1">절대 top 위치값: <span></span></p>
+    <p class="txt_2">상대 top 위치값: <span></span></p> -->
+
+
+
+    <!-- <script>
+        $(function() {
+            var result_1 = $("#chk1").prop("checked")
+            console.log(result_1)
+
+            var result_2 = $("#chk2").prop("checked")
+            console.log(result_2)
+
+            var result_3 = $("#chk3").prop("checked", true)
+            console.log(result_3)
+
+            var result_4 = $("#se_1").prop("selectedIndex");
+            console.log(result_4)
+
+            var result_5 = $("#se_2").prop("selectedIndex", 0);
+            console.log(result_5)
+        })
+    </script>
+
+    <form action = "#" id = "form_1">
+        <p>
+            <input type = "checkbox" name = "chk1" id = "chk1">
+            <label for = "chk1">chk1</label>
+            <input type = "checkbox" name = "chk2" id = "chk2" checked>
+            <label for = "chk2">chk2</label>
+            <input type = "checkbox" name = "chk3" id = "chk3">
+            <label for = "chk3">chk3</label>
+        </p>
+        <p>
+            <select name = "se_1" id = "se_1">
+                <option value = "opt1">option1</option>
+                <option value = "opt2">option2</option>
+                <option value = "opt3">option3</option>
+            </select>
+        </p>
+    </form> -->
+
+
+    <!-- <script>
+        var result_1 = $("#user_name")
+        console.log(result_1);
+    </script>
+
+    <form action = "#" id = "form_1"></form>
+    
+    <p>
+        <label for = "user_name">이름</label><input type = "text" nmae = "user_name" id = "user_name" value = "용대리">
+    </p>
+    <p>
+        <label for = "user_id">아이디</label><input type = "text" nmae = "user_id" id = "user_id" value = "Hello">
+    </p> -->
+
+    <!-- <script>
+        $(function() {
+            $("#p1").addClass("aqua");
+            $("#p2").removeClass("red");
+            $("#p3").toggleClass("green");
+            $("#p4").toggleClass("green");
+        })
+    </script> -->
+    <!-- #요소를 선택하고 변경 / 복제 / 삭제 -->
+
+    <!-- <h1>
+        <strong>객체 변경 / 복제 / 삭제</strong>
+    </h1>
+    <section id="sec_1">
+        <h2><em>html()</em></h2>
+        <p>내용1</p>
+    </section>
+
+    <section id="sec_2">
+        <h2><em>텍스트()</em></h2>
+        <p>내용2</p>
+    </section> -->
+
+</body>
+</html>
